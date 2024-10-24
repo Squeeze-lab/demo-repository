@@ -6,3 +6,4 @@ on:
 jobs:
   call-workflow-in-another-repo:
     uses: Squeeze-lab/.github/.github/workflows/auto-add-issue-to-ux-project-board.yml@main
+    secrets: inherit
