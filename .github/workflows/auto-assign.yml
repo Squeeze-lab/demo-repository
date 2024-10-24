@@ -4,13 +4,5 @@ on:
     types: [labeled]
 
 jobs:
-  add-to-project:
-    name: Add issue to project
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/add-to-project@v1.0.2
-        with:
-          project-url: https://github.com/orgs/Squeeze-lab/projects/1
-          github-token: ${{ secrets.AUTO_ADD_ISSUES_TO_UX_PROJECT_BOARD }}
-          labeled: ux, 🚨 ux/triage, 🔁 ux/consistency, ♿️ accessibility, 🚨 accessibility/concern, 👱‍♀️ status/research, 🎨 status/design
-          label-operator: OR
+  call-workflow-in-another-repo:
+    uses: Squeeze-lab/.github/workflows/auto-add-issue-to-ux-project-board.yml@main
